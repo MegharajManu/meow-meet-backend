@@ -18,7 +18,10 @@ app.use(cors({
 
 const io = new Server(server, {
   cors: {
-    origin: FRONTEND_URL,
+    origin: [
+      'http://localhost:3000',
+      'https://meow-meet-frontend.vercel.app'
+    ],
     methods: ['GET', 'POST'],
     credentials: true,
   },
